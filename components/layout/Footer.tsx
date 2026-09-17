@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-footer-bg text-white">
       <Container className="py-12 sm:py-16">
-        <div className="flex flex-col gap-10 border-b border-white/10 pb-10 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex flex-col gap-10 pb-8 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-sm">
             <Logo boxed />
             <p className="mt-4 text-sm text-white/70">
@@ -16,45 +16,46 @@ export default function Footer() {
               <br />
               Mobility for people. Opportunity for communities.
             </p>
-            <SocialLinks className="mt-6 flex items-center gap-3" />
           </div>
 
-          <div className="flex flex-col gap-6">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-              {headquarters.map((hq) => (
-                <div key={hq.label}>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-orange">{hq.label}</p>
-                  <address className="mt-2 text-sm not-italic text-white/70">
-                    {hq.lines.map((line) => (
-                      <span key={line} className="block">
-                        {line}
-                      </span>
-                    ))}
-                  </address>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {headquarters.map((hq) => (
+              <div key={hq.label}>
+                <p className="text-xs font-semibold uppercase tracking-wider text-brand-orange">{hq.label}</p>
+                <address className="mt-2 text-sm not-italic text-white/70">
+                  {hq.lines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </address>
+              </div>
+            ))}
+          </div>
+        </div>
 
-            <div className="flex flex-wrap items-center justify-start gap-3 sm:justify-end">
-              <button
-                type="button"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-medium text-white/80 transition-colors hover:bg-white/10"
+        <div className="flex flex-col gap-4 border-y border-white/10 py-6 sm:flex-row sm:items-center sm:justify-between">
+          <SocialLinks className="flex items-center gap-3" />
+
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-medium text-white/80 transition-colors hover:bg-white/10"
+            >
+              Cookie Settings
+            </button>
+
+            <label className="inline-flex items-center gap-2 text-xs font-medium text-white/80">
+              <span className="sr-only">Region and language</span>
+              <select
+                defaultValue="global-en"
+                className="rounded-full border border-white/20 bg-transparent px-4 py-2 text-xs text-white/80 [&>option]:text-gray-900"
               >
-                Cookie Settings
-              </button>
-
-              <label className="inline-flex items-center gap-2 text-xs font-medium text-white/80">
-                <span className="sr-only">Region and language</span>
-                <select
-                  defaultValue="global-en"
-                  className="rounded-full border border-white/20 bg-transparent px-4 py-2 text-xs text-white/80 [&>option]:text-gray-900"
-                >
-                  <option value="global-en">Global / EN</option>
-                  <option value="us-en">United States / EN</option>
-                  <option value="uk-en">United Kingdom / EN</option>
-                </select>
-              </label>
-            </div>
+                <option value="global-en">Global / EN</option>
+                <option value="us-en">United States / EN</option>
+                <option value="uk-en">United Kingdom / EN</option>
+              </select>
+            </label>
           </div>
         </div>
 
@@ -75,7 +76,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-8 space-y-2 text-xs text-white/50">
+        <div className="mt-8 space-y-2 text-center text-xs text-white/50">
           <p>© {year} Zoiko Mobility Inc. All rights reserved. · A Zoiko Group company.</p>
           <p>
             Zoiko Mobility Inc is the parent company of Zoiko Rides and DriverXtra. Product and service availability
