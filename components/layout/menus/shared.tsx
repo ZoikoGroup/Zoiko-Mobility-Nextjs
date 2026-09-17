@@ -257,7 +257,7 @@ export function StatCard({
 
 export function BottomBar({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-col flex-wrap gap-3 border-t border-gray-100 bg-gray-50/60 p-4 sm:flex-row sm:items-center sm:gap-10">
+    <div className="grid grid-cols-1 divide-y divide-gray-100 border-t border-gray-100 bg-gray-50/60 sm:grid-cols-2 sm:divide-x sm:divide-y-0">
       {children}
     </div>
   );
@@ -279,20 +279,20 @@ export function BottomAction({
   return (
     <Link
       href={href}
-      className="group/action flex items-center gap-3 rounded-xl px-3 py-2 transition-colors hover:bg-white"
+      className="group/action flex w-full items-center justify-between gap-4 px-6 py-4 transition-colors hover:bg-white"
     >
-      <IconBadge icon={icon} tone={tone} shape="circle" />
-      <span>
-        <span className="block text-sm font-semibold text-brand-purple-dark">{title}</span>
-        <span className="flex items-center gap-1.5 text-xs text-gray-500">
-          {description}
-          <span
-            aria-hidden
-            className="text-[#3B2667] transition-transform duration-150 group-hover/action:translate-x-0.5 group-hover/action:text-brand-orange"
-          >
-            →
-          </span>
+      <span className="flex items-center gap-3">
+        <IconBadge icon={icon} tone={tone} shape="circle" />
+        <span>
+          <span className="block text-sm font-semibold text-brand-purple-dark">{title}</span>
+          <span className="block text-xs text-gray-500">{description}</span>
         </span>
+      </span>
+      <span
+        aria-hidden
+        className="text-[#3B2667] transition-transform duration-150 group-hover/action:translate-x-0.5 group-hover/action:text-brand-orange"
+      >
+        →
       </span>
     </Link>
   );
