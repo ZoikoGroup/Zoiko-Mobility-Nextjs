@@ -42,14 +42,14 @@ export default function Header() {
               <div key={group.label} className="group">
                 <Link
                   href={group.href}
-                  className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold text-gray-700 transition-colors hover:text-brand-purple"
+                  className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold text-gray-700 transition-colors hover:text-[#EB6C17]"
                 >
                   {group.label}
                   {hasDropdown && (
                     <svg
                       aria-hidden
                       viewBox="0 0 20 20"
-                      className="h-4 w-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                      className="h-4 w-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180 group-hover:text-[#EB6C17] group-focus-within:rotate-180 group-focus-within:text-[#EB6C17]"
                     >
                       <path
                         fillRule="evenodd"

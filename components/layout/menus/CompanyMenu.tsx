@@ -87,7 +87,7 @@ const columns: {
 
 export default function CompanyMenu() {
   return (
-    <MenuPanel className="w-[1100px] max-w-[92vw]">
+    <MenuPanel className="w-[1400px] max-w-[92vw]">
       <div className="grid grid-cols-1 gap-6 p-6 lg:grid-cols-[220px_1fr_220px]">
         <PromoCard
           eyebrow="Our Company"
@@ -97,6 +97,7 @@ export default function CompanyMenu() {
           ctaHref="/company/about"
           ctaVariant="white"
           caption="Mobility for people. Opportunity for communities."
+          image="/images/menu/partners-promo.png"
         />
 
         <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:divide-x lg:divide-gray-100">
@@ -118,6 +119,7 @@ export default function CompanyMenu() {
           ctaLabel="Our impact"
           ctaHref="/company/sustainability"
           ctaVariant="white"
+          image="/images/menu/partners-stats.png"
         />
       </div>
 
