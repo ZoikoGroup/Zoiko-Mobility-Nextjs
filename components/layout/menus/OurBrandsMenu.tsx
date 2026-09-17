@@ -41,7 +41,7 @@ export default function OurBrandsMenu() {
                 alt={brand.name}
                 width={brand.logoWidth}
                 height={brand.logoHeight}
-                className="h-9 w-auto"
+                className="h-6 w-auto"
               />
               <p className="mt-4 text-sm text-gray-500">{brand.tagline}</p>
               <Link
