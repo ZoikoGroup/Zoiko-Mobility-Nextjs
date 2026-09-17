@@ -60,13 +60,15 @@ export default function WhatWeDoMenu() {
         </div>
       </div>
 
-      <Link
-        href="/what-we-do"
-        className="flex items-center justify-center gap-2 border-t border-gray-100 bg-brand-orange py-4 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
-      >
-        Explore What We Do
-        <span aria-hidden>→</span>
-      </Link>
+      <div className="flex justify-center border-t border-gray-100 p-6">
+        <Link
+          href="/what-we-do"
+          className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
+        >
+          Explore What We Do
+          <span aria-hidden>→</span>
+        </Link>
+      </div>
     </MenuPanel>
   );
 }
