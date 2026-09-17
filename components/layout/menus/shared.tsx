@@ -67,7 +67,7 @@ export function ChevronLink({ href, children }: { href: string; children: ReactN
   return (
     <Link
       href={href}
-      className="group/link flex items-center justify-between font-menu-item text-[11px] font-normal leading-none tracking-normal text-gray-600 transition-colors hover:text-brand-purple"
+      className="group/link flex items-center justify-between font-menu-item text-[9px] font-normal leading-none tracking-normal text-gray-600 transition-colors hover:text-brand-purple"
     >
       {children}
       <svg
@@ -100,7 +100,7 @@ export function MenuColumn({
   children: ReactNode;
 }) {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 lg:px-6 lg:first:pl-0 lg:last:pr-0">
       <IconBadge icon={icon} tone={tone} shape="circle" />
       <div>
         <p className="text-[12px] font-semibold text-brand-purple-dark">{title}</p>
@@ -271,7 +271,9 @@ export function BottomAction({
       className="group/action flex w-full items-center justify-between gap-4 px-6 py-4 transition-colors hover:bg-white"
     >
       <span className="flex items-center gap-3">
-        <IconBadge icon={icon} tone={tone} shape="circle" />
+        <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#F7F7F9]">
+          <IconBadge icon={icon} tone={tone} shape="circle" />
+        </span>
         <span>
           <span className="block text-sm font-semibold text-brand-purple-dark">{title}</span>
           <span className="block text-xs text-gray-500">{description}</span>

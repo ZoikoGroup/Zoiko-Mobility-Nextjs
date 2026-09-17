@@ -99,7 +99,7 @@ export default function CompanyMenu() {
           caption="Mobility for people. Opportunity for communities."
         />
 
-        <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:divide-x lg:divide-gray-100">
           {columns.map((column) => (
             <MenuColumn key={column.title} icon={column.icon} tone={column.tone} title={column.title} subtitle={column.subtitle}>
               {column.links.map((link) => (
