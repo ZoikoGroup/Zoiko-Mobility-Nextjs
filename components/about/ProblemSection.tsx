@@ -13,7 +13,7 @@ const improvements = [
 
 export default function ProblemSection() {
   return (
-    <AnimatedSection className="bg-white py-16 sm:py-20">
+    <AnimatedSection className="bg-[#F7F7F9] py-16 sm:py-20">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <Eyebrow>Why Zoiko Mobility exists</Eyebrow>
