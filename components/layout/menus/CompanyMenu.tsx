@@ -87,7 +87,7 @@ const columns: {
 
 export default function CompanyMenu() {
   return (
-    <MenuPanel className="w-full">
+    <MenuPanel className="w-[1100px] max-w-[92vw]">
       <div className="grid grid-cols-1 gap-6 p-6 lg:grid-cols-[220px_1fr_220px]">
         <PromoCard
           eyebrow="Our Company"

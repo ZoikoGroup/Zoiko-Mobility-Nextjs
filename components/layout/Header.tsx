@@ -35,32 +35,40 @@ export default function Header() {
         <Logo />
 
         <nav aria-label="Primary" className="hidden lg:flex lg:items-center lg:gap-1">
-          {primaryNav.map((group) => (
-            <div key={group.label} className="group">
-              <Link
-                href={group.href}
-                className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold text-gray-700 transition-colors hover:text-brand-purple"
-              >
-                {group.label}
-                <svg
-                  aria-hidden
-                  viewBox="0 0 20 20"
-                  className="h-4 w-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.24 4.38a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
-                    clipRule="evenodd"
-                    fill="currentColor"
-                  />
-                </svg>
-              </Link>
+          {primaryNav.map((group) => {
+            const hasDropdown = group.label !== "Newsroom";
 
-              <div className="invisible absolute inset-x-0 top-full opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                <NavDropdown label={group.label} />
+            return (
+              <div key={group.label} className="group">
+                <Link
+                  href={group.href}
+                  className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold text-gray-700 transition-colors hover:text-brand-purple"
+                >
+                  {group.label}
+                  {hasDropdown && (
+                    <svg
+                      aria-hidden
+                      viewBox="0 0 20 20"
+                      className="h-4 w-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.06l3.71-3.83a.75.75 0 1 1 1.08 1.04l-4.24 4.38a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z"
+                        clipRule="evenodd"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  )}
+                </Link>
+
+                {hasDropdown && (
+                  <div className="invisible absolute left-1/2 top-full -translate-x-1/2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <NavDropdown label={group.label} />
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </nav>
 
         <div className="hidden lg:block">

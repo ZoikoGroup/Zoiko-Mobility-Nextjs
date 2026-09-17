@@ -49,7 +49,7 @@ const policyLinks = [
 
 export default function SafetyTrustMenu() {
   return (
-    <MenuPanel className="w-full">
+    <MenuPanel className="w-[820px] max-w-[92vw]">
       <div className="grid grid-cols-1 gap-8 p-6 lg:grid-cols-[1fr_260px]">
         <div>
           <Eyebrow>Safety & Trust</Eyebrow>

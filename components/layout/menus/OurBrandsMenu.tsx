@@ -25,7 +25,7 @@ const brands = [
 
 export default function OurBrandsMenu() {
   return (
-    <MenuPanel className="w-full max-w-2xl">
+    <MenuPanel className="w-[640px] max-w-[92vw]">
       <div className="p-6">
         <Eyebrow>Our Brands</Eyebrow>
         <MenuHeading>One mobility company. Two focused experiences.</MenuHeading>
@@ -34,7 +34,7 @@ export default function OurBrandsMenu() {
           {brands.map((brand) => (
             <div
               key={brand.name}
-              className="flex flex-col items-start gap-4 rounded-2xl border border-gray-100 p-5 transition-shadow hover:shadow-md"
+              className="flex flex-col items-start gap-4 rounded-2xl border border-[#3A3652]/20 bg-white p-5 shadow-[0_0_4px_rgba(0,0,0,0.1)] transition-shadow hover:shadow-[0_0_8px_rgba(0,0,0,0.15)]"
             >
               <Image
                 src={brand.logo}
