@@ -19,23 +19,46 @@ export default function Footer() {
             <SocialLinks className="mt-6 flex items-center gap-3" />
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {headquarters.map((hq) => (
-              <div key={hq.label}>
-                <p className="text-xs font-semibold uppercase tracking-wider text-brand-orange">{hq.label}</p>
-                <address className="mt-2 text-sm not-italic text-white/70">
-                  {hq.lines.map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
-                </address>
-              </div>
-            ))}
+          <div className="flex flex-col gap-6">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+              {headquarters.map((hq) => (
+                <div key={hq.label}>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-brand-orange">{hq.label}</p>
+                  <address className="mt-2 text-sm not-italic text-white/70">
+                    {hq.lines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </address>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap items-center justify-start gap-3 sm:justify-end">
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-medium text-white/80 transition-colors hover:bg-white/10"
+              >
+                Cookie Settings
+              </button>
+
+              <label className="inline-flex items-center gap-2 text-xs font-medium text-white/80">
+                <span className="sr-only">Region and language</span>
+                <select
+                  defaultValue="global-en"
+                  className="rounded-full border border-white/20 bg-transparent px-4 py-2 text-xs text-white/80 [&>option]:text-gray-900"
+                >
+                  <option value="global-en">Global / EN</option>
+                  <option value="us-en">United States / EN</option>
+                  <option value="uk-en">United Kingdom / EN</option>
+                </select>
+              </label>
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 py-10 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-8 border-b border-white/10 py-10 sm:grid-cols-3 lg:grid-cols-5">
           {footerColumns.map((column) => (
             <div key={column.label}>
               <p className="text-xs font-semibold uppercase tracking-wider text-brand-orange">{column.label}</p>
@@ -50,27 +73,6 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-        </div>
-
-        <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <button
-            type="button"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-medium text-white/80 transition-colors hover:bg-white/10"
-          >
-            Cookie Settings
-          </button>
-
-          <label className="inline-flex items-center gap-2 text-xs font-medium text-white/80">
-            <span className="sr-only">Region and language</span>
-            <select
-              defaultValue="global-en"
-              className="rounded-full border border-white/20 bg-transparent px-4 py-2 text-xs text-white/80 [&>option]:text-gray-900"
-            >
-              <option value="global-en">Global / EN</option>
-              <option value="us-en">United States / EN</option>
-              <option value="uk-en">United Kingdom / EN</option>
-            </select>
-          </label>
         </div>
 
         <div className="mt-8 space-y-2 text-xs text-white/50">
