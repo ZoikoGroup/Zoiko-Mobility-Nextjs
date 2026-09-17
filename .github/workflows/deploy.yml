@@ -1,0 +1,28 @@
+name: Deploy Zoiko Mobility Website
+
+concurrency:
+  group: deploy-zoiko-mobility
+  cancel-in-progress: false
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH and deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.GCP_SSH_HOST }}
+          username: ${{ secrets.GCP_SSH_USER }}
+          key: ${{ secrets.GCP_SSH_KEY }}
+          script: |
+            set -e
+            cd /var/www/zoiko-mobility/app
+            git pull origin main
+            npm install
+            npm run build
+            pm2 restart zoiko-mobility
+            pm2 save
