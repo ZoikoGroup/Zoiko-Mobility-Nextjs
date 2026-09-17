@@ -52,10 +52,10 @@ export function ArrowLink({ href, children }: { href: string; children: ReactNod
   return (
     <Link
       href={href}
-      className="group/link flex items-center gap-1.5 font-menu-item text-[14.55px] font-normal leading-none tracking-normal text-gray-700 transition-colors hover:text-brand-purple"
+      className="group/link flex pb-5 items-center gap-1.5 font-menu-item text-[14.55px] font-normal leading-none tracking-normal text-gray-700 transition-colors hover:text-brand-purple"
     >
       {children}
-      <span aria-hidden className="transition-transform duration-150 group-hover/link:translate-x-0.5">
+      <span aria-hidden className="text-[#3B2667] transition-transform duration-150 group-hover/link:translate-x-0.5">
         →
       </span>
     </Link>
@@ -72,7 +72,7 @@ export function ChevronLink({ href, children }: { href: string; children: ReactN
       <svg
         aria-hidden
         viewBox="0 0 20 20"
-        className="h-3.5 w-3.5 shrink-0 text-gray-300 transition-transform duration-150 group-hover/link:translate-x-0.5 group-hover/link:text-brand-orange"
+        className="h-3.5 w-3.5 shrink-0 text-[#3B2667] transition-transform duration-150 group-hover/link:translate-x-0.5 group-hover/link:text-brand-orange"
       >
         <path
           fillRule="evenodd"
@@ -232,7 +232,7 @@ export function BottomAction({
           {description}
           <span
             aria-hidden
-            className="text-gray-300 transition-transform duration-150 group-hover/action:translate-x-0.5 group-hover/action:text-brand-orange"
+            className="text-[#3B2667] transition-transform duration-150 group-hover/action:translate-x-0.5 group-hover/action:text-brand-orange"
           >
             →
           </span>

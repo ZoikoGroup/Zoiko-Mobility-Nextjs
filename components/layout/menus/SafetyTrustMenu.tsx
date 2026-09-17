@@ -49,7 +49,7 @@ const policyLinks = [
 
 export default function SafetyTrustMenu() {
   return (
-    <MenuPanel className="w-[980px] max-w-[92vw]">
+    <MenuPanel className="w-[1080px] max-w-[92vw]">
       <div className="grid grid-cols-1 gap-8 p-6 lg:grid-cols-[1fr_260px]">
         <div>
           <Eyebrow>Safety & Trust</Eyebrow>
@@ -118,7 +118,7 @@ function ArrowCard({
           </span>
           <span
             aria-hidden
-            className="text-gray-300 transition-transform duration-150 group-hover/card:translate-x-0.5 group-hover/card:text-brand-orange"
+            className="text-[#3B2667] transition-transform duration-150 group-hover/card:translate-x-0.5 group-hover/card:text-brand-orange"
           >
             →
           </span>
