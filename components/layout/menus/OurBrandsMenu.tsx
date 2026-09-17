@@ -1,0 +1,60 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Eyebrow, MenuHeading, MenuPanel } from "./shared";
+
+const brands = [
+  {
+    name: "Zoiko Rides",
+    href: "/brands/zoiko-rides",
+    tagline: "Rider-facing mobility",
+    ctaLabel: "Explore Zoiko Rides",
+    logo: "/images/menu/zoiko-rides-logo.png",
+    logoWidth: 1072,
+    logoHeight: 180,
+  },
+  {
+    name: "DriverXtra",
+    href: "/brands/driverxtra",
+    tagline: "Driver-focused mobility",
+    ctaLabel: "Explore DriverXtra",
+    logo: "/images/menu/DriverXtra.png",
+    logoWidth: 744,
+    logoHeight: 180,
+  },
+];
+
+export default function OurBrandsMenu() {
+  return (
+    <MenuPanel className="w-full max-w-2xl">
+      <div className="p-6">
+        <Eyebrow>Our Brands</Eyebrow>
+        <MenuHeading>One mobility company. Two focused experiences.</MenuHeading>
+
+        <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {brands.map((brand) => (
+            <div
+              key={brand.name}
+              className="flex flex-col items-start gap-4 rounded-2xl border border-gray-100 p-5 transition-shadow hover:shadow-md"
+            >
+              <Image
+                src={brand.logo}
+                alt={brand.name}
+                width={brand.logoWidth}
+                height={brand.logoHeight}
+                className="h-7 w-auto"
+              />
+              <p className="text-sm text-gray-500">{brand.tagline}</p>
+              <Link
+                href={brand.href}
+                className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
+              >
+                {brand.ctaLabel}
+                <span aria-hidden>→</span>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </MenuPanel>
+  );
+}
