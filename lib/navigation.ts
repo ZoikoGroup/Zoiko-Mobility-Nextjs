@@ -54,7 +54,7 @@ export const primaryNav: NavGroup[] = [
     label: "Company",
     href: "/company",
     links: [
-      { label: "About", href: "/company/about" },
+      { label: "About", href: "/about-us" },
       { label: "Leadership", href: "/company/leadership" },
       { label: "Our Story", href: "/company/our-story" },
       { label: "Zoiko Group", href: "/company/zoiko-group" },
@@ -79,7 +79,7 @@ export const footerColumns: NavGroup[] = [
     label: "Mobility",
     href: "/mobility",
     links: [
-      { label: "About Zoiko Mobility", href: "/mobility/about" },
+      { label: "About Zoiko Mobility", href: "/about-us" },
       { label: "Mobility Technology", href: "/mobility/technology" },
       { label: "Mobility Platform", href: "/mobility/platform" },
       { label: "Cities & Communities", href: "/mobility/cities-and-communities" },

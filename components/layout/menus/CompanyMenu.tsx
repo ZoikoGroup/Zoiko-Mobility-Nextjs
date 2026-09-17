@@ -94,7 +94,7 @@ export default function CompanyMenu() {
           title="People. Mobility. A Brighter Tomorrow."
           description="Driving progress through technology, partnership and purpose."
           ctaLabel="About Zoiko Mobility"
-          ctaHref="/company/about"
+          ctaHref="/about-us"
           ctaVariant="white"
           caption="Mobility for people. Opportunity for communities."
           image="/images/menu/partners-promo.png"
