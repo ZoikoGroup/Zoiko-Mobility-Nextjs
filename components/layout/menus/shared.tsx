@@ -44,7 +44,7 @@ export function ArrowLink({ href, children }: { href: string; children: ReactNod
   return (
     <Link
       href={href}
-      className="group/link flex items-center gap-1.5 text-sm text-gray-700 transition-colors hover:text-brand-purple"
+      className="group/link flex items-center gap-1.5 font-menu-item text-[14.55px] font-normal leading-none tracking-normal text-gray-700 transition-colors hover:text-brand-purple"
     >
       {children}
       <span aria-hidden className="transition-transform duration-150 group-hover/link:translate-x-0.5">
@@ -58,7 +58,7 @@ export function ChevronLink({ href, children }: { href: string; children: ReactN
   return (
     <Link
       href={href}
-      className="group/link flex items-center justify-between text-sm text-gray-600 transition-colors hover:text-brand-purple"
+      className="group/link flex items-center justify-between font-menu-item text-[14.55px] font-normal leading-none tracking-normal text-gray-600 transition-colors hover:text-brand-purple"
     >
       {children}
       <svg

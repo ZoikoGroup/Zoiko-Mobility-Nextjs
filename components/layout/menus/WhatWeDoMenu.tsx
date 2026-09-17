@@ -48,7 +48,7 @@ export default function WhatWeDoMenu() {
             >
               <IconBadge icon={column.icon} tone="purple" shape="square" />
               <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">{column.label}</p>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-5">
                 {column.links.map((link) => (
                   <ArrowLink key={link.href} href={link.href}>
                     {link.label}

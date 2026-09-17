@@ -21,6 +21,7 @@
   --color-footer-bg: var(--color-footer-bg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-menu-item: var(--font-inter);
 }
 
 body {
