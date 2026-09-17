@@ -1,1 +1,9 @@
 export { default as HeroSection } from "./HeroSection";
+export { default as WhatIsSection } from "./WhatIsSection";
+export { default as BrandsSection } from "./BrandsSection";
+export { default as EcosystemSection } from "./EcosystemSection";
+export { default as HomeSafetyTrustSection } from "./HomeSafetyTrustSection";
+export { default as WorkWithUsSection } from "./WorkWithUsSection";
+export { default as ZoikoGroupSection } from "./ZoikoGroupSection";
+export { default as CareersSection } from "./CareersSection";
+export { default as NextStepsSection } from "./NextStepsSection";

@@ -14,7 +14,10 @@ export type MenuIconName =
   | "handshake"
   | "document"
   | "mail"
-  | "globe";
+  | "globe"
+  | "person"
+  | "truck"
+  | "plane";
 
 const paths: Record<MenuIconName, string> = {
   layers: "M12 3 2 8l10 5 10-5-10-5Zm-10 8 10 5 10-5M2 16l10 5 10-5",
@@ -38,6 +41,11 @@ const paths: Record<MenuIconName, string> = {
     "M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8l-4-5Zm0 0v5h4M9 13h6M9 17h6",
   mail: "M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm0 0 8 7 8-7",
   globe: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-9-9h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3Z",
+  person: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-8 9c0-4 3.6-7 8-7s8 3 8 7",
+  truck:
+    "M2 7h11v10H2Zm11 3h5l3 3v4h-8Zm-8.5 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm11 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
+  plane:
+    "m2 12 20-8-8 20-2-8-8-2Z",
 };
 
 type MenuIconProps = {
