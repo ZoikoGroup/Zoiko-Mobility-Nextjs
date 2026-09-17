@@ -184,50 +184,39 @@ export function StatCard({
   title,
   stats,
   image,
-  arrowHref,
   className,
 }: {
   eyebrow: string;
   title: string;
   stats: { value: string; label: string }[];
   image?: string;
-  arrowHref?: string;
   className?: string;
 }) {
   if (image) {
     return (
-      <div className={clsx("flex h-full flex-col overflow-hidden rounded-2xl", className)}>
-        <div className="relative flex flex-1 flex-col justify-between overflow-hidden p-6 text-white">
-          <Image src={image} alt="" fill sizes="220px" className="object-cover" priority={false} />
-          <div
-            aria-hidden
-            className="absolute inset-0 bg-gradient-to-t from-brand-purple-dark via-brand-purple-dark/60 to-brand-purple-dark/20"
-          />
-          <div className="relative">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-orange">{eyebrow}</p>
-            <h3 className="mt-2 text-lg font-bold leading-snug">{title}</h3>
-          </div>
-          <div className="relative mt-6 grid grid-cols-3 gap-2">
-            {stats.map((stat) => (
-              <div key={stat.label}>
-                <p className="text-lg font-bold leading-tight">{stat.value}</p>
-                <p className="mt-0.5 text-[10px] leading-tight text-white/60">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+      <div
+        className={clsx(
+          "relative flex h-full flex-col justify-between overflow-hidden rounded-2xl p-6 text-white",
+          className
+        )}
+      >
+        <Image src={image} alt="" fill sizes="220px" className="object-cover" priority={false} />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-t from-brand-purple-dark via-brand-purple-dark/60 to-brand-purple-dark/20"
+        />
+        <div className="relative">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-orange">{eyebrow}</p>
+          <h3 className="mt-2 text-lg font-bold leading-snug">{title}</h3>
         </div>
-        <Link
-          href={arrowHref ?? "#"}
-          aria-label={eyebrow}
-          className="group/arrow flex items-center justify-end bg-white px-6 py-4"
-        >
-          <span
-            aria-hidden
-            className="text-[#3B2667] transition-transform duration-150 group-hover/arrow:translate-x-0.5"
-          >
-            →
-          </span>
-        </Link>
+        <div className="relative mt-6 grid grid-cols-3 gap-2">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <p className="text-md font-bold leading-tight">{stat.value}</p>
+              <p className="mt-0.5 text-[10px] leading-tight text-white/60">{stat.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

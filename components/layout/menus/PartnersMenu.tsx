@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BottomAction, BottomBar, ChevronLink, MenuColumn, MenuPanel, PromoCard, StatCard } from "./shared";
 import type { MenuIconName } from "./icons";
 
@@ -83,7 +84,7 @@ const columns: {
 
 export default function PartnersMenu() {
   return (
-    <MenuPanel className="w-[1300px] max-w-[92vw]">
+    <MenuPanel className="w-[1400px] max-w-[92vw]">
       <div className="grid grid-cols-1 gap-6 p-6 lg:grid-cols-[220px_1fr_220px]">
         <PromoCard
           eyebrow="Partner with Zoiko Mobility"
@@ -108,17 +109,31 @@ export default function PartnersMenu() {
           ))}
         </div>
 
-        <StatCard
-          eyebrow="Partnerships that move the world"
-          title="Together we build smarter, safer and more inclusive cities."
-          stats={[
-            { value: "100+", label: "Strategic partners" },
-            { value: "50+", label: "Cities worldwide" },
-            { value: "1 shared", label: "brighter tomorrow" },
-          ]}
-          image="/images/menu/partners-stats.png"
-          arrowHref="/partners"
-        />
+        <div className="flex h-full flex-col gap-2">
+          <StatCard
+            className="flex-1"
+            eyebrow="Partnerships that move the world"
+            title="Together we build smarter, safer and more inclusive cities."
+            stats={[
+              { value: "100+", label: "Strategic partners" },
+              { value: "50+", label: "Cities worldwide" },
+              { value: "1 shared", label: "brighter tomorrow" },
+            ]}
+            image="/images/menu/partners-stats.png"
+          />
+          <Link
+            href="/partners"
+            aria-label="Explore partners"
+            className="group/arrow flex shrink-0 justify-end pr-1"
+          >
+            <span
+              aria-hidden
+              className="text-[#3B2667] transition-transform duration-150 group-hover/arrow:translate-x-0.5"
+            >
+              →
+            </span>
+          </Link>
+        </div>
       </div>
 
       <BottomBar>
