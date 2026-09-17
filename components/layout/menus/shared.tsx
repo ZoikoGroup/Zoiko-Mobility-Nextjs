@@ -67,7 +67,7 @@ export function ChevronLink({ href, children }: { href: string; children: ReactN
   return (
     <Link
       href={href}
-      className="group/link flex items-center justify-between font-menu-item text-[14.55px] font-normal leading-none tracking-normal text-gray-600 transition-colors hover:text-brand-purple"
+      className="group/link flex items-center justify-between font-menu-item text-[11px] font-normal leading-none tracking-normal text-gray-600 transition-colors hover:text-brand-purple"
     >
       {children}
       <svg
@@ -103,10 +103,10 @@ export function MenuColumn({
     <div className="flex flex-col gap-3">
       <IconBadge icon={icon} tone={tone} shape="circle" />
       <div>
-        <p className="text-sm font-semibold text-brand-purple-dark">{title}</p>
+        <p className="text-[12px] font-semibold text-brand-purple-dark">{title}</p>
         {subtitle && <p className="mt-0.5 text-xs text-gray-500">{subtitle}</p>}
       </div>
-      <div className="flex flex-col gap-2 border-t border-gray-100 pt-3">{children}</div>
+      <div className="flex flex-col gap-5 border-t border-gray-100 pt-3">{children}</div>
     </div>
   );
 }
@@ -207,11 +207,11 @@ export function StatCard({
             <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-orange">{eyebrow}</p>
             <h3 className="mt-2 text-lg font-bold leading-snug">{title}</h3>
           </div>
-          <div className="relative mt-6 flex items-end gap-4">
+          <div className="relative mt-6 grid grid-cols-3 gap-2">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="text-2xl font-bold">{stat.value}</p>
-                <p className="text-[11px] text-white/60">{stat.label}</p>
+                <p className="text-lg font-bold leading-tight">{stat.value}</p>
+                <p className="mt-0.5 text-[10px] leading-tight text-white/60">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -219,11 +219,11 @@ export function StatCard({
         <Link
           href={arrowHref ?? "#"}
           aria-label={eyebrow}
-          className="group/arrow flex items-center justify-end bg-brand-purple-dark px-6 py-4"
+          className="group/arrow flex items-center justify-end bg-white px-6 py-4"
         >
           <span
             aria-hidden
-            className="text-white transition-transform duration-150 group-hover/arrow:translate-x-0.5"
+            className="text-[#3B2667] transition-transform duration-150 group-hover/arrow:translate-x-0.5"
           >
             →
           </span>
@@ -243,11 +243,11 @@ export function StatCard({
         <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-orange">{eyebrow}</p>
         <h3 className="mt-2 text-lg font-bold leading-snug">{title}</h3>
       </div>
-      <div className="mt-6 flex items-end gap-4">
+      <div className="mt-6 grid grid-cols-3 gap-2">
         {stats.map((stat) => (
           <div key={stat.label}>
-            <p className="text-2xl font-bold">{stat.value}</p>
-            <p className="text-[11px] text-white/60">{stat.label}</p>
+            <p className="text-lg font-bold leading-tight">{stat.value}</p>
+            <p className="mt-0.5 text-[10px] leading-tight text-white/60">{stat.label}</p>
           </div>
         ))}
       </div>

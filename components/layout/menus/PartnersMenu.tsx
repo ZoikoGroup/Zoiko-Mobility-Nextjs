@@ -83,7 +83,7 @@ const columns: {
 
 export default function PartnersMenu() {
   return (
-    <MenuPanel className="w-[1100px] max-w-[92vw]">
+    <MenuPanel className="w-[1300px] max-w-[92vw]">
       <div className="grid grid-cols-1 gap-6 p-6 lg:grid-cols-[220px_1fr_220px]">
         <PromoCard
           eyebrow="Partner with Zoiko Mobility"
@@ -109,12 +109,12 @@ export default function PartnersMenu() {
         </div>
 
         <StatCard
-          eyebrow="That move the world"
+          eyebrow="Partnerships that move the world"
           title="Together we build smarter, safer and more inclusive cities."
           stats={[
-            { value: "100+", label: "Partners" },
-            { value: "50+", label: "Cities" },
-            { value: "1", label: "Shared mission" },
+            { value: "100+", label: "Strategic partners" },
+            { value: "50+", label: "Cities worldwide" },
+            { value: "1 shared", label: "brighter tomorrow" },
           ]}
           image="/images/menu/partners-stats.png"
           arrowHref="/partners"
