@@ -232,7 +232,12 @@ export function BottomAction({
 
 export function MenuPanel({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <div className={clsx("rounded-b-2xl border border-t-0 border-gray-100 bg-white shadow-xl", className)}>
+    <div
+      className={clsx(
+        "rounded-b-2xl border border-t-0 border-gray-100 bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)]",
+        className
+      )}
+    >
       {children}
     </div>
   );
