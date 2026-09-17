@@ -25,13 +25,13 @@ export function IconBadge({
   return (
     <span
       className={clsx(
-        "inline-flex h-10 w-10 items-center justify-center border",
-        shape === "square" ? "rounded-xl" : "rounded-full",
-        tone === "purple" && "border-brand-purple/15 bg-brand-purple/5 text-brand-purple-dark",
+        "inline-flex items-center justify-center border",
+        shape === "square" ? "h-14 w-14 rounded-2xl" : "h-10 w-10 rounded-full",
+        tone === "purple" && "border-brand-purple/20 bg-brand-purple/5 text-brand-purple-dark",
         tone === "orange" && "border-brand-orange/20 bg-brand-orange/10 text-brand-orange"
       )}
     >
-      <MenuIcon name={icon} className="h-5 w-5" />
+      <MenuIcon name={icon} className={shape === "square" ? "h-7 w-7" : "h-5 w-5"} />
     </span>
   );
 }
@@ -234,7 +234,7 @@ export function MenuPanel({ children, className }: { children: ReactNode; classN
   return (
     <div
       className={clsx(
-        "rounded-b-2xl border border-gray-100 bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)]",
+        "overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)]",
         className
       )}
     >

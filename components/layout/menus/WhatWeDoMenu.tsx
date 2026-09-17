@@ -36,13 +36,16 @@ const columns: {
 export default function WhatWeDoMenu() {
   return (
     <MenuPanel className="w-[760px] max-w-[92vw]">
-      <div className="p-6">
+      <div className="p-8">
         <Eyebrow>What We Do</Eyebrow>
         <MenuHeading>Technology and infrastructure for connected mobility.</MenuHeading>
 
-        <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 divide-y divide-gray-100 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {columns.map((column) => (
-            <div key={column.label} className="flex flex-col gap-3">
+            <div
+              key={column.label}
+              className="flex flex-col gap-3 py-6 first:pt-0 last:pb-0 sm:px-8 sm:py-0 sm:first:pl-0 sm:last:pr-0"
+            >
               <IconBadge icon={column.icon} tone="purple" shape="square" />
               <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">{column.label}</p>
               <div className="flex flex-col gap-2">
@@ -59,7 +62,7 @@ export default function WhatWeDoMenu() {
 
       <Link
         href="/what-we-do"
-        className="flex items-center justify-center gap-2 rounded-b-2xl bg-brand-orange py-4 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
+        className="flex items-center justify-center gap-2 border-t border-gray-100 bg-brand-orange py-4 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
       >
         Explore What We Do
         <span aria-hidden>→</span>

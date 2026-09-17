@@ -34,7 +34,7 @@ export default function OurBrandsMenu() {
           {brands.map((brand) => (
             <div
               key={brand.name}
-              className="flex h-[217px] w-[367px] flex-col rounded-2xl border border-[#3A3652]/20 bg-white p-5 shadow-[0_0_4px_rgba(0,0,0,0.1)] transition-shadow hover:shadow-[0_0_8px_rgba(0,0,0,0.15)]"
+              className="flex w-[367px] flex-col rounded-2xl border border-[#3A3652]/20 bg-white p-5 shadow-[0_0_4px_rgba(0,0,0,0.1)] transition-shadow hover:shadow-[0_0_8px_rgba(0,0,0,0.15)]"
             >
               <Image
                 src={brand.logo}
@@ -46,7 +46,7 @@ export default function OurBrandsMenu() {
               <p className="mt-4 text-sm text-gray-500">{brand.tagline}</p>
               <Link
                 href={brand.href}
-                className="mt-auto inline-flex w-fit items-center gap-2 rounded-full bg-brand-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
+                className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-brand-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
               >
                 {brand.ctaLabel}
                 <span aria-hidden>→</span>
