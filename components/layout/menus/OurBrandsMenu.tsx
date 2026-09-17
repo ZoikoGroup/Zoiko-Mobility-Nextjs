@@ -25,8 +25,8 @@ const brands = [
 
 export default function OurBrandsMenu() {
   return (
-    <MenuPanel className="w-[830px] max-w-[92vw]">
-      <div className="p-6">
+    <MenuPanel className="w-[850px] max-w-[92vw]">
+      <div className="p-10">
         <Eyebrow>Our Brands</Eyebrow>
         <MenuHeading>One mobility company. Two focused experiences.</MenuHeading>
 
@@ -41,7 +41,7 @@ export default function OurBrandsMenu() {
                 alt={brand.name}
                 width={brand.logoWidth}
                 height={brand.logoHeight}
-                className="h-6 w-auto"
+                className="h-6 w-auto self-start object-contain"
               />
               <p className="mt-4 text-sm text-gray-500">{brand.tagline}</p>
               <Link
