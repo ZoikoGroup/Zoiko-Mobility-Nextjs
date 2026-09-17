@@ -35,7 +35,7 @@ const columns: {
 
 export default function WhatWeDoMenu() {
   return (
-    <MenuPanel className="w-[850px] max-w-[92vw]">
+    <MenuPanel className="w-[850px] max-w-[100vw]">
       <div className="p-8">
         <Eyebrow>What We Do</Eyebrow>
         <MenuHeading>Technology and infrastructure for connected mobility.</MenuHeading>

@@ -26,12 +26,16 @@ export function IconBadge({
     <span
       className={clsx(
         "inline-flex items-center justify-center border",
-        shape === "square" ? "h-14 w-14 rounded-2xl" : "h-10 w-10 rounded-full",
-        tone === "purple" && "border-brand-purple/20 bg-brand-purple/5 text-brand-purple-dark",
-        tone === "orange" && "border-brand-orange/20 bg-brand-orange/10 text-brand-orange"
+        shape === "square"
+          ? "h-[95px] w-[95px] rounded-2xl border-[#3B2667] bg-transparent text-brand-purple-dark"
+          : clsx(
+              "h-10 w-10 rounded-full",
+              tone === "purple" && "border-brand-purple/20 bg-brand-purple/5 text-brand-purple-dark",
+              tone === "orange" && "border-brand-orange/20 bg-brand-orange/10 text-brand-orange"
+            )
       )}
     >
-      <MenuIcon name={icon} className={shape === "square" ? "h-7 w-7" : "h-5 w-5"} />
+      <MenuIcon name={icon} className={shape === "square" ? "h-10 w-10" : "h-5 w-5"} />
     </span>
   );
 }
