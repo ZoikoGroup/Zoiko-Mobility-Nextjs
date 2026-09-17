@@ -100,11 +100,11 @@ export function MenuColumn({
   children: ReactNode;
 }) {
   return (
-    <div className="flex flex-col gap-3 lg:px-6 lg:first:pl-0 lg:last:pr-0">
+    <div className="flex flex-col gap-3 lg:px-2 lg:first:pl-0 lg:last:pr-0">
       <IconBadge icon={icon} tone={tone} shape="circle" />
       <div>
-        <p className="text-[12px] font-semibold text-brand-purple-dark">{title}</p>
-        {subtitle && <p className="mt-0.5 text-xs text-gray-500">{subtitle}</p>}
+        <p className="text-[10px] font-semibold text-brand-purple-dark">{title}</p>
+        {subtitle && <p className="mt-0.5 text-[9px] text-gray-500">{subtitle}</p>}
       </div>
       <div className="flex flex-col gap-5 border-t border-gray-100 pt-3">{children}</div>
     </div>
@@ -271,8 +271,14 @@ export function BottomAction({
       className="group/action flex w-full items-center justify-between gap-4 px-6 py-4 transition-colors hover:bg-white"
     >
       <span className="flex items-center gap-3">
-        <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#F7F7F9]">
-          <IconBadge icon={icon} tone={tone} shape="circle" />
+        <span
+          className={clsx(
+            "flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-white",
+            tone === "orange" && "bg-brand-orange",
+            tone === "purple" && "bg-brand-purple-dark"
+          )}
+        >
+          <MenuIcon name={icon} className="h-5 w-5" />
         </span>
         <span>
           <span className="block text-sm font-semibold text-brand-purple-dark">{title}</span>
