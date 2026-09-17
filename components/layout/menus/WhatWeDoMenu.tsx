@@ -35,7 +35,7 @@ const columns: {
 
 export default function WhatWeDoMenu() {
   return (
-    <MenuPanel className="w-[760px] max-w-[92vw]">
+    <MenuPanel className="w-[850px] max-w-[92vw]">
       <div className="p-8">
         <Eyebrow>What We Do</Eyebrow>
         <MenuHeading>Technology and infrastructure for connected mobility.</MenuHeading>
@@ -60,10 +60,10 @@ export default function WhatWeDoMenu() {
         </div>
       </div>
 
-      <div className="flex justify-center border-t border-gray-100 p-6">
+      <div className="border-t border-gray-100 p-6">
         <Link
           href="/what-we-do"
-          className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
+          className="flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-orange py-4 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
         >
           Explore What We Do
           <span aria-hidden>→</span>
