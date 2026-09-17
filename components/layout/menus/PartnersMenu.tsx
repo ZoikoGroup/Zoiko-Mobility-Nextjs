@@ -93,6 +93,7 @@ export default function PartnersMenu() {
           ctaHref="/partners/become-a-partner"
           ctaVariant="blue"
           caption="Ideas today. A more connected tomorrow."
+          image="/images/menu/partners-promo.png"
         />
 
         <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
@@ -115,6 +116,8 @@ export default function PartnersMenu() {
             { value: "50+", label: "Cities" },
             { value: "1", label: "Shared mission" },
           ]}
+          image="/images/menu/partners-stats.png"
+          arrowHref="/partners"
         />
       </div>
 
