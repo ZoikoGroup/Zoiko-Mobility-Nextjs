@@ -164,9 +164,9 @@ export function PromoCard({
         <Link
           href={ctaHref}
           className={clsx(
-            "inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors",
+            "inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-1.5 text-[13px] font-semibold transition-colors",
             ctaVariant === "orange" && "bg-brand-orange text-white hover:bg-brand-orange-dark",
-            ctaVariant === "blue" && "bg-blue-600 text-white hover:bg-blue-700",
+            ctaVariant === "blue" && "bg-[#2B7BE4] text-white hover:bg-[#2568c4]",
             ctaVariant === "white" && "bg-white text-brand-purple-dark hover:bg-white/90"
           )}
         >
@@ -212,7 +212,7 @@ export function StatCard({
         <div className="relative mt-6 grid grid-cols-3 gap-2">
           {stats.map((stat) => (
             <div key={stat.label}>
-              <p className="text-md font-bold leading-tight">{stat.value}</p>
+              <p className="text-[12px] font-bold leading-tight">{stat.value}</p>
               <p className="mt-0.5 text-[10px] leading-tight text-white/60">{stat.label}</p>
             </div>
           ))}
