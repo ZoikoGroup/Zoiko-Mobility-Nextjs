@@ -7,7 +7,7 @@ import { Container, Button } from "@/components/shared";
 export default function HeroSection() {
   return (
     <section className="overflow-hidden bg-white">
-      <Container className="grid grid-cols-1 items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:py-28">
+      <Container className="grid grid-cols-1 items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:py-15">
         <div className="flex flex-col items-start gap-5">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
