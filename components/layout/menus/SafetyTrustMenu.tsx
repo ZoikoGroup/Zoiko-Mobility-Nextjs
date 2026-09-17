@@ -78,7 +78,7 @@ export default function SafetyTrustMenu() {
           <div className="mt-2 border-t border-gray-100 pt-4">
             <a
               href="/safety-and-trust"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
+              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-orange px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
             >
               Explore Safety & Trust
               <span aria-hidden>→</span>
@@ -106,14 +106,16 @@ function ArrowCard({
   return (
     <a
       href={href}
-      className={`group/card flex items-start gap-3 rounded-xl border border-gray-100 p-4 transition-shadow hover:shadow-md ${
+      className={`group/card flex h-[112px] items-start gap-3 rounded-xl border border-gray-100 p-4 transition-shadow hover:shadow-md ${
         wide ? "sm:col-span-2" : ""
       }`}
     >
-      <IconBadge icon={icon} tone="purple" shape="square" />
+      <IconBadge icon={icon} tone="purple" shape="square" size="sm" />
       <span className="flex-1">
         <span className="flex items-center justify-between gap-2">
-          <span className="text-sm font-semibold text-brand-purple-dark">{title}</span>
+          <span className="font-menu-item text-[13.78px] font-bold leading-none tracking-normal text-[#0F1B33]">
+            {title}
+          </span>
           <span
             aria-hidden
             className="text-gray-300 transition-transform duration-150 group-hover/card:translate-x-0.5 group-hover/card:text-brand-orange"
@@ -121,7 +123,9 @@ function ArrowCard({
             →
           </span>
         </span>
-        <span className="mt-1 block text-xs text-gray-500">{description}</span>
+        <span className="mt-1.5 block font-menu-item text-[11.87px] font-normal leading-[1.15] tracking-normal text-[#5A6B7C]">
+          {description}
+        </span>
       </span>
     </a>
   );

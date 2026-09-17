@@ -47,8 +47,8 @@ export default function WhatWeDoMenu() {
               className="flex flex-col gap-3 py-6 first:pt-0 last:pb-0 sm:px-8 sm:py-0 sm:first:pl-0 sm:last:pr-0"
             >
               <IconBadge icon={column.icon} tone="purple" shape="square" />
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">{column.label}</p>
-              <div className="flex flex-col gap-5">
+              <p className="text-[11px] font-semibold pb-3 uppercase tracking-wider text-gray-400">{column.label}</p>
+              <div className="flex flex-col gap-7">
                 {column.links.map((link) => (
                   <ArrowLink key={link.href} href={link.href}>
                     {link.label}

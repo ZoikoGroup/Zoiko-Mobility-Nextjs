@@ -17,17 +17,22 @@ export function IconBadge({
   icon,
   tone = "purple",
   shape = "square",
+  size = "lg",
 }: {
   icon: MenuIconName;
   tone?: "purple" | "orange";
   shape?: "square" | "circle";
+  size?: "sm" | "lg";
 }) {
   return (
     <span
       className={clsx(
         "inline-flex items-center justify-center border",
         shape === "square"
-          ? "h-[95px] w-[95px] rounded-2xl border-[#3B2667] bg-transparent text-brand-purple-dark"
+          ? clsx(
+              size === "lg" ? "h-[95px] w-[95px] rounded-2xl" : "h-11 w-11 rounded-xl",
+              "border-[#3B2667] bg-transparent text-brand-purple-dark"
+            )
           : clsx(
               "h-10 w-10 rounded-full",
               tone === "purple" && "border-brand-purple/20 bg-brand-purple/5 text-brand-purple-dark",
@@ -35,7 +40,10 @@ export function IconBadge({
             )
       )}
     >
-      <MenuIcon name={icon} className={shape === "square" ? "h-10 w-10" : "h-5 w-5"} />
+      <MenuIcon
+        name={icon}
+        className={shape === "square" ? (size === "lg" ? "h-10 w-10" : "h-5 w-5") : "h-5 w-5"}
+      />
     </span>
   );
 }
@@ -238,7 +246,7 @@ export function MenuPanel({ children, className }: { children: ReactNode; classN
   return (
     <div
       className={clsx(
-        "overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)]",
+        "overflow-hidden rounded-2xl bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)]",
         className
       )}
     >
