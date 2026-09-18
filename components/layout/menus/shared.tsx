@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
+import { SweepLink } from "@/components/shared";
 import { MenuIcon, MenuIconName } from "./icons";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
@@ -161,18 +162,26 @@ export function PromoCard({
       </div>
 
       <div className="relative mt-6">
-        <Link
+        <SweepLink
           href={ctaHref}
           className={clsx(
-            "inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-4 py-1.5 text-[13px] font-semibold transition-colors",
-            ctaVariant === "orange" && "bg-brand-orange text-white hover:bg-brand-orange-dark",
-            ctaVariant === "blue" && "bg-[#2B7BE4] text-white hover:bg-[#2568c4]",
-            ctaVariant === "white" && "bg-white text-brand-purple-dark hover:bg-white/90"
+            "items-center gap-1.5 whitespace-nowrap rounded-full border-2 px-4 py-1.5 text-[13px] font-semibold",
+            ctaVariant === "orange" && "border-brand-orange bg-brand-orange text-white",
+            ctaVariant === "blue" && "border-[#2B7BE4] bg-[#2B7BE4] text-white",
+            ctaVariant === "white" && "border-white bg-white text-brand-purple-dark"
+          )}
+          fillClassName={ctaVariant === "white" ? "bg-brand-purple-dark" : "bg-white"}
+          hoverTextClassName={clsx(
+            ctaVariant === "orange" && "group-hover:text-brand-orange",
+            ctaVariant === "blue" && "group-hover:text-[#2B7BE4]",
+            ctaVariant === "white" && "group-hover:text-white"
           )}
         >
           {ctaLabel}
-          <span aria-hidden>→</span>
-        </Link>
+          <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">
+            →
+          </span>
+        </SweepLink>
         {caption && <p className="mt-4 text-xs text-white/50">{caption}</p>}
       </div>
     </div>

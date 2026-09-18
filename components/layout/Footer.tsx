@@ -40,9 +40,15 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-3">
             <button
               type="button"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-medium text-white/80 transition-colors hover:bg-white/10"
+              className="group relative inline-flex overflow-hidden rounded-full border border-white/20 px-4 py-2 text-xs font-medium text-white/80"
             >
-              Cookie Settings
+              <span
+                aria-hidden
+                className="absolute inset-0 origin-left scale-x-0 bg-white transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:scale-x-100"
+              />
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-brand-purple-dark">
+                Cookie Settings
+              </span>
             </button>
 
             <label className="inline-flex items-center gap-2 text-xs font-medium text-white/80">

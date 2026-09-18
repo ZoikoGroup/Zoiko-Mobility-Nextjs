@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { SweepLink } from "@/components/shared";
 import { Eyebrow, MenuHeading, MenuPanel } from "./shared";
 
 const brands = [
@@ -44,13 +44,16 @@ export default function OurBrandsMenu() {
                 className="h-6 w-auto self-start object-contain"
               />
               <p className="mt-4 text-sm text-gray-500">{brand.tagline}</p>
-              <Link
+              <SweepLink
                 href={brand.href}
-                className="mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-brand-orange px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
+                className="mt-10 w-fit items-center gap-2 rounded-full border-2 border-brand-orange bg-brand-orange px-4 py-2 text-sm font-semibold text-white"
+                hoverTextClassName="group-hover:text-brand-orange"
               >
                 {brand.ctaLabel}
-                <span aria-hidden>→</span>
-              </Link>
+                <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">
+                  →
+                </span>
+              </SweepLink>
             </div>
           ))}
         </div>

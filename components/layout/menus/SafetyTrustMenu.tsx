@@ -1,3 +1,4 @@
+import { SweepLink } from "@/components/shared";
 import { ArrowLink, Eyebrow, IconBadge, MenuHeading, MenuPanel } from "./shared";
 import type { MenuIconName } from "./icons";
 
@@ -76,13 +77,16 @@ export default function SafetyTrustMenu() {
             ))}
           </div>
           <div className="mt-2 border-t border-gray-100 pt-4">
-            <a
+            <SweepLink
               href="/safety-and-trust"
-              className="flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-orange px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
+              className="w-full items-center justify-center gap-2 rounded-2xl border-2 border-brand-orange bg-brand-orange px-4 py-3 text-sm font-semibold text-white"
+              hoverTextClassName="group-hover:text-brand-orange"
             >
               Explore Safety & Trust
-              <span aria-hidden>→</span>
-            </a>
+              <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">
+                →
+              </span>
+            </SweepLink>
           </div>
         </div>
       </div>

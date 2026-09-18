@@ -1,6 +1,6 @@
-import Link from "next/link";
 import clsx from "clsx";
 import { ReactNode } from "react";
+import SweepLink from "./SweepLink";
 
 type ButtonProps = {
   href: string;
@@ -11,21 +11,26 @@ type ButtonProps = {
 
 export default function Button({ href, children, variant = "primary", className }: ButtonProps) {
   return (
-    <Link
+    <SweepLink
       href={href}
       className={clsx(
-        "group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-200",
-        variant === "primary" && "bg-brand-orange text-white hover:bg-brand-orange-dark",
-        variant === "outline" && "border border-white/30 text-white hover:bg-white/10",
-        variant === "outline-dark" &&
-          "border border-gray-300 text-brand-purple-dark hover:bg-gray-50",
+        "items-center gap-2 rounded-full border-2 px-5 py-2.5 text-sm font-semibold",
+        variant === "primary" && "border-brand-orange bg-brand-orange text-white",
+        variant === "outline" && "border-white bg-transparent text-white",
+        variant === "outline-dark" && "border-brand-purple-dark bg-white text-brand-purple-dark",
         className
+      )}
+      fillClassName={variant === "outline-dark" ? "bg-brand-purple-dark" : "bg-white"}
+      hoverTextClassName={clsx(
+        variant === "primary" && "group-hover:text-brand-orange",
+        variant === "outline" && "group-hover:text-brand-purple-dark",
+        variant === "outline-dark" && "group-hover:text-white"
       )}
     >
       {children}
-      <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-0.5">
+      <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">
         →
       </span>
-    </Link>
+    </SweepLink>
   );
 }
