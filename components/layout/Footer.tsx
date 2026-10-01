@@ -44,7 +44,7 @@ export default function Footer() {
             >
               <span
                 aria-hidden
-                className="absolute inset-0 origin-left scale-x-0 bg-white transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/sweep:scale-x-100"
+                className="absolute inset-0 origin-top-left scale-0 bg-white transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/sweep:scale-100"
               />
               <span className="relative z-10 transition-colors duration-300 group-hover/sweep:text-brand-purple-dark">
                 Cookie Settings
