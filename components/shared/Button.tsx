@@ -22,13 +22,13 @@ export default function Button({ href, children, variant = "primary", className 
       )}
       fillClassName={variant === "outline-dark" ? "bg-brand-purple-dark" : "bg-white"}
       hoverTextClassName={clsx(
-        variant === "primary" && "group-hover:text-brand-orange",
-        variant === "outline" && "group-hover:text-brand-purple-dark",
-        variant === "outline-dark" && "group-hover:text-white"
+        variant === "primary" && "group-hover/sweep:text-brand-orange",
+        variant === "outline" && "group-hover/sweep:text-brand-purple-dark",
+        variant === "outline-dark" && "group-hover/sweep:text-white"
       )}
     >
       {children}
-      <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">
+      <span aria-hidden className="transition-transform duration-300 group-hover/sweep:translate-x-0.5">
         →
       </span>
     </SweepLink>

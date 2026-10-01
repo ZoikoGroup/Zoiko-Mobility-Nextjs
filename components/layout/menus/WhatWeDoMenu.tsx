@@ -64,10 +64,10 @@ export default function WhatWeDoMenu() {
         <SweepLink
           href="/what-we-do"
           className="w-full items-center justify-center gap-2 rounded-2xl border-2 border-brand-orange bg-brand-orange py-4 text-sm font-semibold text-white"
-          hoverTextClassName="group-hover:text-brand-orange"
+          hoverTextClassName="group-hover/sweep:text-brand-orange"
         >
           Explore What We Do
-          <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">
+          <span aria-hidden className="transition-transform duration-300 group-hover/sweep:translate-x-0.5">
             →
           </span>
         </SweepLink>

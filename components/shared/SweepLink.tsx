@@ -21,11 +21,11 @@ export default function SweepLink({
   hoverTextClassName,
 }: SweepLinkProps) {
   return (
-    <Link href={href} className={clsx("group relative inline-flex overflow-hidden", className)}>
+    <Link href={href} className={clsx("group/sweep relative inline-flex overflow-hidden", className)}>
       <span
         aria-hidden
         className={clsx(
-          "absolute inset-0 origin-left scale-x-0 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:scale-x-100",
+          "absolute inset-0 origin-left scale-x-0 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/sweep:scale-x-100",
           fillClassName
         )}
       />

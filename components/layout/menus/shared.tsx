@@ -172,13 +172,13 @@ export function PromoCard({
           )}
           fillClassName={ctaVariant === "white" ? "bg-brand-purple-dark" : "bg-white"}
           hoverTextClassName={clsx(
-            ctaVariant === "orange" && "group-hover:text-brand-orange",
-            ctaVariant === "blue" && "group-hover:text-[#2B7BE4]",
-            ctaVariant === "white" && "group-hover:text-white"
+            ctaVariant === "orange" && "group-hover/sweep:text-brand-orange",
+            ctaVariant === "blue" && "group-hover/sweep:text-[#2B7BE4]",
+            ctaVariant === "white" && "group-hover/sweep:text-white"
           )}
         >
           {ctaLabel}
-          <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">
+          <span aria-hidden className="transition-transform duration-300 group-hover/sweep:translate-x-0.5">
             →
           </span>
         </SweepLink>

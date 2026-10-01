@@ -47,10 +47,10 @@ export default function OurBrandsMenu() {
               <SweepLink
                 href={brand.href}
                 className="mt-10 w-fit items-center gap-2 rounded-full border-2 border-brand-orange bg-brand-orange px-4 py-2 text-sm font-semibold text-white"
-                hoverTextClassName="group-hover:text-brand-orange"
+                hoverTextClassName="group-hover/sweep:text-brand-orange"
               >
                 {brand.ctaLabel}
-                <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">
+                <span aria-hidden className="transition-transform duration-300 group-hover/sweep:translate-x-0.5">
                   →
                 </span>
               </SweepLink>
