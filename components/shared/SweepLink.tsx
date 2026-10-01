@@ -25,7 +25,7 @@ export default function SweepLink({
       <span
         aria-hidden
         className={clsx(
-          "absolute inset-0 origin-top-left scale-0 rounded-[100px] transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/sweep:scale-100",
+          "absolute inset-0 origin-top-left scale-0 rounded-[inherit] transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/sweep:scale-100",
           fillClassName
         )}
       />
