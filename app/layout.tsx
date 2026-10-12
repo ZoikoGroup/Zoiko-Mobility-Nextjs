@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Zoiko Mobility",
+  title: "Zoiko Mobility | EV, Driver & Fleet Mobility Platform",
   description: "Zoiko Mobility — mobility for people, opportunity for communities.",
 };
 
